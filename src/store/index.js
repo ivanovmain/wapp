@@ -3,7 +3,7 @@ import ApolloClient from 'apollo-boost';
 import { gql } from 'apollo-boost';
 
 class Store {
-  cities = ['Сургут'];
+  cities = [];
 
   client = new ApolloClient({
     uri: 'https://7b3u2.sse.codesandbox.io/',
