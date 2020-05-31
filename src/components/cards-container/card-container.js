@@ -26,7 +26,7 @@ const CardContainer = ({cities}) => {
   return (
     <div className={styles.gridContainer}>
       <Grid container spacing={4} className={styles.gridInner}>
-        {citiesCards}
+        {citiesCards.length === 0 ? 'List empty': citiesCards}
       </Grid>
     </div>
   )
