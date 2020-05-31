@@ -14,7 +14,7 @@ class Store {
   }
 
   addCity(city) {
-    this.setCity([...this.cities, city]);
+    this.setCity([city, ...this.cities]);
   }
 
   getCurrentWeather(city) {

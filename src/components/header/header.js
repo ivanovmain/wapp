@@ -15,7 +15,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Link as RouterLink } from 'react-router-dom';
 
-const useStyles = makeStyles(() => {
+const useStyles = makeStyles((theme) => {
   return {
     typographyStyles: {
       flex: 1,
@@ -42,6 +42,9 @@ const useStyles = makeStyles(() => {
     },
     headerLink: {
       fontSize: 26,
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    }
     },
     inputBtn: {
       alignSelf: 'flex-start',
@@ -155,7 +158,7 @@ function Header(props) {
             startIcon={<SaveIcon/>}
             className={styles.inputBtn}
           >
-            Add city
+            Add
             {showSpinner ? (
               <CircularProgress className={styles.circularProgress}/>
             ) : null}
